@@ -1,0 +1,30 @@
+{
+  "name": "pushnotification",
+  "version": "1.0.0",
+  "description": "push using node js and service workers",
+  "main": "\"\"",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sumitkumar25/PushNotification.git"
+  },
+  "keywords": [
+    "node",
+    "service-worker",
+    "push",
+    "notification"
+  ],
+  "author": "sumitkumar25",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sumitkumar25/PushNotification/issues"
+  },
+  "homepage": "https://github.com/sumitkumar25/PushNotification#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "web-push": "^3.3.3"
+  }
+}
