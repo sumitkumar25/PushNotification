@@ -10,10 +10,12 @@ app.use(express.static(path.join(__dirname, 'client')));
 // middleware
 app.use(bp.json())
 
-const vapidKeys = webPush.generateVAPIDKeys()
+let vapidKeys = {
+    publicKey: 'BMR4meYZs5Ctp_LxcQJLTJfflmUPZO4GXYff7dfI31V64KwDRMkap8eVEf3SKG6tIKNKPiddWMEK75deAVRpLX4',
+    privateKey: 'geXyeE7jVbEESUqOnEG0qsg4fxUAw-k8p-6Zupxpc7c'
+}
 
-webPush.setVapidDetails('mailto:sumitdskumar@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey)
-console.log(vapidKeys);
+webPush.setVapidDetails('mailto:sumitdskumar@gmail.com', vapidKeys.publicKey, vapidKeys.privateKey);
 // subscribe route
 
 app.post('/subscribe', (req, res) => {
@@ -25,14 +27,13 @@ app.post('/subscribe', (req, res) => {
 
     //payload
     const payload = JSON.stringify({
-        'title': 'Push'
+        'title': 'Colortokens',
+        'text': 'lorem ipsium lorem ipsium lorem ipsium'
     })
     // Pass object into sendNotification
     webPush
         .sendNotification(pushSubScription, payload)
-        .then(res => {
-            console.log('sendNotification', res)
-        })
+        .then(res => {})
         .catch(err => console.error(err));
 });
 

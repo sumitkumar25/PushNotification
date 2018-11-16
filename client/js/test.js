@@ -3,7 +3,7 @@ if ('serviceWorker' in navigator) {
         console.log(e);
     })
 }
-const publicKey = 'BAGWMzhIB-OMvkFvVqkK-fs9pEVlMmU326azqojPKJSCTS7D-afjVt5HkL38_TjUvXtAyhsB4SAtHjqF_vv9F5Q';
+const publicKey = 'BMR4meYZs5Ctp_LxcQJLTJfflmUPZO4GXYff7dfI31V64KwDRMkap8eVEf3SKG6tIKNKPiddWMEK75deAVRpLX4';
 // register sw, register Push,  send push
 async function send() {
     console.log('register sw');
